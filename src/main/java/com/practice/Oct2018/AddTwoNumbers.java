@@ -17,6 +17,14 @@ public class AddTwoNumbers
     原因：342 + 465 = 807
      */
 
+    /**
+     * 以链表合并的思路实现，
+     * 其实以新建链表的方式实现，代码更简洁
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2)
     {
         if (l1 == null)
