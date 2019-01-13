@@ -38,7 +38,19 @@ public class RotateRight
         ListNode tail = null;
         ListNode pretail = null;
 
-        for (; k > 0; k--)
+        int listLength = 1;
+        // 找到list长度
+        while (headtmp.next != null)
+        {
+            tail = headtmp.next;
+            pretail = headtmp;
+            headtmp = headtmp.next;
+            listLength++;
+        }
+
+        // 移动次数为k对链表长度listLength的取模
+        int num = k % listLength;
+        for (; num > 0; num--)
         {
             headtmp = head;
 
@@ -48,6 +60,7 @@ public class RotateRight
                 tail = headtmp.next;
                 pretail = headtmp;
                 headtmp = headtmp.next;
+                listLength++;
             }
 
             tail.next = head;
