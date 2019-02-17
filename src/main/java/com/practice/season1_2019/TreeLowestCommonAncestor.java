@@ -39,18 +39,33 @@ public class TreeLowestCommonAncestor
         {
             return null;
         }
-        if (p == null)
+        // 如果根节点是结点之一，则根节点必定是两结点的最近公共祖先
+        if (root == p || root == q)
         {
-            return q;
-        }
-        if (q == null)
-        {
-            return p;
+            return root;
         }
 
 
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        // TODO
+        // 左右都不为空，即分别在左右子树找到了两个结点，则根节点必定为最近公共祖先
+        if (left != null && right != null)
+        {
+            return root;
+        }
+        // 只有left不为空，则说明另一个结点必定是左的子结点，则最近公共祖先必定为left
+        else if (left != null)
+        {
+            return left;
+        }
+        // 同上
+        else if (right != null)
+        {
+            return right;
+        }
+
+        // 左右都是空，该子二叉树不存在p、q结点
         return null;
     }
 }
