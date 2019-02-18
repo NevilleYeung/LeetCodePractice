@@ -1,5 +1,6 @@
 package com.practice.Oct2018;
 
+import com.practice.common.ListNode;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
