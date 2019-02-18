@@ -1,5 +1,7 @@
 package com.practice.Oct2018;
 
+import com.practice.common.ListNode;
+
 /**
  * 2. 两数相加
  * https://leetcode-cn.com/problems/add-two-numbers/description/

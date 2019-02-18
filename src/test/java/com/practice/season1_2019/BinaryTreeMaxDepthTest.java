@@ -1,8 +1,7 @@
 package com.practice.season1_2019;
 
+import com.practice.common.TreeNode;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class BinaryTreeMaxDepthTest
 {

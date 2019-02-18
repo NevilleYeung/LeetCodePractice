@@ -1,5 +1,7 @@
 package com.practice.season1_2019;
 
+import com.practice.common.ListNode;
+
 /**
  * 61. 旋转链表
  * https://leetcode-cn.com/problems/rotate-list/
@@ -50,6 +52,7 @@ public class RotateRight
 
         // 移动次数为k对链表长度listLength的取模
         int num = k % listLength;
+        // TODO 待优化，是否可以不用循环
         for (; num > 0; num--)
         {
             headtmp = head;
