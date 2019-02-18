@@ -30,6 +30,7 @@ public class ReverseList
         ListNode headNextNext = headTmp.next.next;
         ListNode tmp = null;
 
+        // 先翻转第1、2个node
         tmp = headNext;
         headTmp.next = null;
         tmp.next = headTmp;
@@ -37,6 +38,7 @@ public class ReverseList
         headTmp = tmp;
         headNext = headNextNext;
 
+        // 再循环反转剩下的
         while (headNext != null)
         {
             tmp = headNext.next;
@@ -45,7 +47,45 @@ public class ReverseList
             headNext = tmp;
         }
 
-
         return headTmp;
+    }
+
+
+    /**
+     * 另一种类似的方式，可以节省点内存
+     * @param head
+     * @return
+     */
+    public ListNode reverseList01(ListNode head)
+    {
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+
+        ListNode headTmp = head;
+        ListNode tmp = null;
+
+        // 记录前中后的node
+        ListNode front = null;
+        ListNode mid = headTmp;
+        ListNode back = headTmp.next;
+
+        while (back != null)
+        {
+            // 将中间node指向前node
+            mid.next = front;
+
+            // 前中后node全部next一下
+            tmp = back;
+            front = mid;
+            mid = back;
+            back = tmp.next;
+        }
+
+        // 把最后一个节点指向前node
+        mid.next = front;
+
+        return mid;
     }
 }
