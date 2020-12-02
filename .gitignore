@@ -2,3 +2,4 @@
 LeetCodePractice.iml
 *.class
 .idea/*
+target/*
