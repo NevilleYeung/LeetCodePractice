@@ -1,5 +1,8 @@
 package com.practice.season2021;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 560. 和为K的子数组
  * 前缀和
@@ -16,7 +19,7 @@ public class SubarraySum {
     数组的长度为 [1, 20,000]。
     数组中元素的范围是 [-1000, 1000] ，且整数 k 的范围是 [-1e7, 1e7]。
      */
-    public int subarraySum(int[] nums, int k) {
+    public int subarraySum1(int[] nums, int k) {
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -38,4 +41,22 @@ public class SubarraySum {
 
         return re;
     }
+
+    public int subarraySum(int[] nums, int k) {
+        int count = 0;
+        int pre = 0;
+        Map<Integer,Integer> map = new HashMap<>();
+        map.put(0,1);  // 保证前缀和与k相等的场景能覆盖
+        for(int i = 0; i < nums.length; i++) {
+            pre += nums[i];
+            if(map.containsKey(pre-k)) {
+                // 存在一个数字加上nums[i]结果为K
+                count += map.get(pre-k);
+            }
+            map.put(pre,map.getOrDefault(pre,0)+1);
+
+        }
+        return count;
+    }
+
 }
