@@ -5,6 +5,7 @@ import java.util.Deque;
 
 /**
  * 85. 最大矩形
+ * [单调栈]
  * https://leetcode-cn.com/problems/maximal-rectangle/
  */
 public class MaximalRectangle {
@@ -14,7 +15,11 @@ public class MaximalRectangle {
     // 图略
 
     示例 1：
-    输入：matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+    输入：matrix = [
+    ["1","0","1","0","0"],
+    ["1","0","1","1","1"],
+    ["1","1","1","1","1"],
+    ["1","0","0","1","0"]]
     输出：6
     解释：最大矩形如上图所示。
 

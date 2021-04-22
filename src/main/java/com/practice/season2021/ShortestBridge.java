@@ -5,6 +5,7 @@ import java.util.Queue;
 
 /**
  * 934. 最短的桥
+ * [dfs]
  * https://leetcode-cn.com/problems/shortest-bridge/
  */
 public class ShortestBridge {
@@ -38,7 +39,7 @@ public class ShortestBridge {
             return 0;
         }
 
-        // 深度搜索找到第一个岛：
+        // dfs深度搜索找到第一个岛：
         // 把第一个岛屿的1变成2；
         // 把第一个岛屿的节点放入队列中。
         Queue<Node> island1 = new LinkedList<>();
@@ -52,7 +53,7 @@ public class ShortestBridge {
             }
         }
 
-        // 利用上一步的队列进行广度搜索，找到另一个岛屿
+        // 利用上一步的队列进行bfs广度搜索，找到另一个岛屿
         boolean [][] visited = new boolean[A.length][A[0].length];
         while (!island1.isEmpty()) {
             Node node = island1.poll();

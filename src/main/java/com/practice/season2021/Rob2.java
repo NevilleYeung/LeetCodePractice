@@ -2,6 +2,7 @@ package com.practice.season2021;
 
 /**
  * 213. 打家劫舍 II
+ * [动态规划]
  * https://leetcode-cn.com/problems/house-robber-ii/
  */
 public class Rob2 {

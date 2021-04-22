@@ -2,6 +2,7 @@ package com.practice.season2021;
 
 /**
  * 240. 搜索二维矩阵 II
+ * [二分查找]
  * https://leetcode-cn.com/problems/search-a-2d-matrix-ii/
  */
 public class SearchMatrix {

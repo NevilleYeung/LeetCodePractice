@@ -64,8 +64,6 @@ public class MaxSatisfied {
 
         }
 
-//        System.out.println("sumZero=" + sumZero + ", grumMax=" + grumMax);
-
         return sumZero + grumMax;
     }
 }
