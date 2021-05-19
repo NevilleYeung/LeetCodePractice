@@ -46,23 +46,4 @@ public class MaxAreaTest
         re = maxArea.maxArea(height);
         System.out.println(Arrays.toString(height) + " = " + re);  // 0
     }
-
-    @Test
-    public void test()
-    {
-        Deque<Integer> stack = new ArrayDeque<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-
-        System.out.println(stack);
-        stack.pop();
-        System.out.println(stack);
-
-        System.out.println("stack.getFirst()=" + stack.getFirst());
-        System.out.println("stack.getLast()=" + stack.getLast());
-
-        System.out.println(stack);
-    }
 }
