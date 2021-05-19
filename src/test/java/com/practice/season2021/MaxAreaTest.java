@@ -2,11 +2,7 @@ package com.practice.season2021;
 
 import org.junit.Test;
 
-import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Deque;
-
-import static org.junit.Assert.*;
 
 public class MaxAreaTest
 {
