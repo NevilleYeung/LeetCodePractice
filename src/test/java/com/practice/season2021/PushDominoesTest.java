@@ -10,11 +10,6 @@ public class PushDominoesTest {
     @Test
     public void pushDominoes() {
 
-//        String s = ".L.R...LR..L..";
-//        String s = "RR.L";
-//        s = s.replace("R.L", "T").replace("R.", "RR").replace(".L", "LL").replace("T", "R.L");
-//        System.out.println(s);
-
         String dominoes = ".L.R...LR..L..";
         String ans = pd.pushDominoes(dominoes);
         System.out.println(ans);
