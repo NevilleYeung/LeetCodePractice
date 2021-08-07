@@ -74,32 +74,6 @@ public class FindRadius {
         return false;
     }
 
-//    private boolean isCover(int[] houses, int[] heaters, int ans) {
-//        for (int house : houses) {
-//            if (house < heaters[0] - ans || heaters[heaters.length - 1] < house) {
-//                return false;
-//            }
-//
-//            boolean isOk = false;
-//            int left = 0;
-//            int right = heaters.length - 1;
-//            int midd = 0;
-//            while (left <= right) {
-//                midd = left + (right - left) / 2;
-//                if (heater[] - ans <= house && house <= heater + ans) {
-//                    isOk = true;
-//                    break;
-//                }
-//            }
-//
-//            if (!isOk) {
-//                return false;
-//            }
-//        }
-//
-//        return true;
-//    }
-
     /**
      * 会超时
      */
