@@ -1,4 +1,4 @@
-package com.questionbank.oneto99;
+package com.questionbank.a0to99;
 
 import java.util.ArrayList;
 import java.util.Arrays;
